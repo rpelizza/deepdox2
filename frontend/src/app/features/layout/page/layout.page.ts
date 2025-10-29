@@ -1,14 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
-import { ToolbarModule } from 'primeng/toolbar';
+import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from '../components/footer.component';
+import { HeaderComponent } from '../components/header.component';
+import { SidebarComponent } from '../components/sidebar.component';
 
 @Component({
 	selector: 'app-layout',
 	templateUrl: './layout.page.html',
 	changeDetection: ChangeDetectionStrategy.Default,
-	imports: [RouterOutlet, RouterLink, RouterLinkActive, ButtonModule, ToolbarModule, CommonModule],
+	imports: [RouterOutlet, HeaderComponent, SidebarComponent, FooterComponent],
 })
 export class LayoutPage {
 	// Sidebar visível por padrão em desktop, oculta em mobile
