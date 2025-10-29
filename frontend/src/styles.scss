@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Define CSS layers order - PrimeNG first, then Tailwind */
+@layer primeng, tailwind-components, tailwind-utilities;
+
+@layer tailwind-components {
+	@tailwind components;
+}
+
+@layer tailwind-utilities {
+	@tailwind utilities;
+}
+
+/* Aplicar fonte Inter globalmente */
+html,
+body {
+	font-family: 'Figtree', sans-serif;
+	font-size: 14px;
+}
