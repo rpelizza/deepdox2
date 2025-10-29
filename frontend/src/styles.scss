@@ -16,4 +16,9 @@ html,
 body {
 	font-family: 'Figtree', sans-serif;
 	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	min-height: 100%;
+	min-width: 100%;
+	background: linear-gradient(180deg, #e0e7f5 0%, rgba(170, 194, 239, 0.06) 111.26%);
 }
