@@ -1,65 +1,34 @@
 <header class="header bg-white shadow-sm border-b border-gray-200 z-10">
 	<p-toolbar>
-		<div class="flex items-center justify-between gap-4 w-full">
-			<!-- Botão Menu Hamburger - sempre visível -->
-			<div class="w-10 flex items-center justify-center">
+		<ng-template #start>
+			<button
+				pButton
+				type="button"
+				[icon]="sidebarVisible() ? 'pi pi-times' : 'pi pi-bars'"
+				class="p-button-text p-button-rounded"
+				(click)="toggleSidebar.emit()"
+				aria-label="Toggle menu"
+				style="min-width: 2.5rem; min-height: 2.5rem; touch-action: manipulation"
+			></button>
+		</ng-template>
+		<ng-template #center>
+			<img src="/images/logo_deep.png" alt="DeepDox Logo" class="h-12 w-auto" />
+		</ng-template>
+		<ng-template #end>
+			<div class="flex items-center gap-3">
 				<button
 					pButton
 					type="button"
-					[icon]="sidebarVisible() ? 'pi pi-times' : 'pi pi-bars'"
+					icon="pi pi-bell"
 					class="p-button-text p-button-rounded"
-					(click)="toggleSidebar.emit()"
-					aria-label="Toggle menu"
-					style="min-width: 2.5rem; min-height: 2.5rem; touch-action: manipulation"
+					aria-label="Notificações"
 				></button>
-			</div>
-
-			<!-- Logo Centralizada -->
-			<div class="flex-1 flex justify-center">
-				<img src="/images/logo_deep.png" alt="DeepDox Logo" class="h-12 w-auto" />
-			</div>
-
-			<!-- Menu Desktop e User Menu -->
-			<div class="flex items-center gap-3 w-10 lg:w-auto">
-				<!-- Menu Desktop -->
-				<nav class="hidden lg:flex items-center gap-2">
-					<a
-						routerLink="/dashboard"
-						class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
-						routerLinkActive="bg-primary-50 text-primary-600"
-					>
-						Dashboard
-					</a>
-					<a
-						href="#"
-						class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
-					>
-						Documentos
-					</a>
-					<a
-						href="#"
-						class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
-					>
-						Configurações
-					</a>
-				</nav>
-
-				<!-- User Menu -->
-				<div class="flex items-center gap-3">
-					<button
-						pButton
-						type="button"
-						icon="pi pi-bell"
-						class="p-button-text p-button-rounded"
-						aria-label="Notificações"
-					></button>
-					<div
-						class="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center text-white font-semibold cursor-pointer hover:bg-primary-600 transition-colors"
-					>
-						U
-					</div>
+				<div
+					class="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center text-white font-semibold cursor-pointer hover:bg-primary-600 transition-colors"
+				>
+					U
 				</div>
 			</div>
-		</div>
+		</ng-template>
 	</p-toolbar>
 </header>
