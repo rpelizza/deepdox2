@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../components/footer.component';
 import { HeaderComponent } from '../components/header.component';
@@ -11,10 +11,10 @@ import { SidebarComponent } from '../components/sidebar.component';
 	imports: [RouterOutlet, HeaderComponent, SidebarComponent, FooterComponent],
 })
 export class LayoutPage {
-	// Sidebar visível por padrão em desktop, oculta em mobile
+	private readonly cdr = inject(ChangeDetectorRef);
 	sidebarVisible = signal(false);
 
-	constructor(private cdr: ChangeDetectorRef) {
+	constructor() {
 		if (typeof window !== 'undefined') {
 			this.sidebarVisible.set(window.innerWidth >= 1024);
 			this.cdr.markForCheck();
