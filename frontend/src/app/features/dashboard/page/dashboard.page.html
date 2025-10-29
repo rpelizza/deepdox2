@@ -1,1 +1,114 @@
-<h1>Dashboard</h1>
+<div class="dashboard-container">
+	<div class="mb-6">
+		<h1 class="text-3xl font-bold text-gray-900 mb-2">Dashboard</h1>
+		<p class="text-gray-600">Bem-vindo ao painel de controle da DeepDox</p>
+	</div>
+
+	<!-- Cards de Estatísticas -->
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+		<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-sm font-medium text-gray-600 mb-1">Total de Documentos</p>
+					<p class="text-2xl font-bold text-gray-900">1,234</p>
+				</div>
+				<div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+					<i class="pi pi-file text-primary-600 text-xl"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-sm font-medium text-gray-600 mb-1">Processados Hoje</p>
+					<p class="text-2xl font-bold text-gray-900">48</p>
+				</div>
+				<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+					<i class="pi pi-check-circle text-green-600 text-xl"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-sm font-medium text-gray-600 mb-1">Em Processamento</p>
+					<p class="text-2xl font-bold text-gray-900">12</p>
+				</div>
+				<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+					<i class="pi pi-clock text-yellow-600 text-xl"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-sm font-medium text-gray-600 mb-1">Taxa de Sucesso</p>
+					<p class="text-2xl font-bold text-gray-900">98%</p>
+				</div>
+				<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+					<i class="pi pi-chart-line text-blue-600 text-xl"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Conteúdo Principal -->
+	<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+		<div class="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+			<h2 class="text-xl font-semibold text-gray-900 mb-4">Atividades Recentes</h2>
+			<div class="space-y-4">
+				<div class="flex items-start gap-4 pb-4 border-b border-gray-100">
+					<div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+						<i class="pi pi-file text-primary-600"></i>
+					</div>
+					<div class="flex-1">
+						<p class="text-sm font-medium text-gray-900">Novo documento processado</p>
+						<p class="text-xs text-gray-500 mt-1">Há 5 minutos</p>
+					</div>
+				</div>
+				<div class="flex items-start gap-4 pb-4 border-b border-gray-100">
+					<div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+						<i class="pi pi-check text-green-600"></i>
+					</div>
+					<div class="flex-1">
+						<p class="text-sm font-medium text-gray-900">Análise concluída com sucesso</p>
+						<p class="text-xs text-gray-500 mt-1">Há 15 minutos</p>
+					</div>
+				</div>
+				<div class="flex items-start gap-4">
+					<div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+						<i class="pi pi-upload text-blue-600"></i>
+					</div>
+					<div class="flex-1">
+						<p class="text-sm font-medium text-gray-900">Upload de novo arquivo</p>
+						<p class="text-xs text-gray-500 mt-1">Há 1 hora</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+			<h2 class="text-xl font-semibold text-gray-900 mb-4">Ações Rápidas</h2>
+			<div class="space-y-3">
+				<button pButton type="button" label="Novo Documento" icon="pi pi-plus" class="w-full"></button>
+				<button
+					pButton
+					type="button"
+					label="Upload Arquivo"
+					icon="pi pi-upload"
+					class="w-full p-button-outlined"
+				></button>
+				<button
+					pButton
+					type="button"
+					label="Relatórios"
+					icon="pi pi-chart-bar"
+					class="w-full p-button-outlined"
+				></button>
+			</div>
+		</div>
+	</div>
+</div>
