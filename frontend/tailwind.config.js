@@ -3,7 +3,11 @@ module.exports = {
 	content: ['./src/**/*.{html,ts,scss}'],
 	darkMode: 'class',
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+			},
+		},
 	},
 	plugins: [require('tailwindcss-primeui')],
 };
