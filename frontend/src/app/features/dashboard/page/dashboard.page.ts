@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 	selector: 'app-dashboard',
 	templateUrl: './dashboard.page.html',
 	changeDetection: ChangeDetectionStrategy.OnPush,
+	standalone: true,
 	imports: [ButtonModule],
 })
 export class DashboardPage {}
