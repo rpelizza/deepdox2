@@ -5,23 +5,29 @@
 
 <!-- Sidebar Desktop -->
 <aside
-	class="hidden lg:block bg-white border-r border-gray-200 overflow-hidden transition-all duration-300 ease-in-out h-full flex-shrink-0"
+	class="hidden lg:block bg-sidebar-surface-900 border-r border-white/10 overflow-hidden transition-all duration-300 ease-in-out h-full flex-shrink-0"
 	[class.w-64]="sidebarVisible()"
 	[class.w-0]="!sidebarVisible()"
 >
 	<div class="h-full overflow-y-auto flex flex-col" [class.w-64]="sidebarVisible()" [class.w-0]="!sidebarVisible()">
 		<!-- User Section -->
 		@if (sidebarVisible()) {
-			<div class="p-4 border-b border-gray-200">
+			<div class="p-4 border-b border-white/10">
 				<div class="flex flex-col items-center gap-3">
 					<img
 						src="https://i.pravatar.cc/150?img=12"
 						alt="Foto do usuário"
-						class="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
+						class="w-16 h-16 rounded-full object-cover user-avatar"
+						style="
+							border: 4px solid white;
+							box-shadow:
+								0 4px 6px -1px rgba(0, 0, 0, 0.1),
+								0 2px 4px -2px rgba(0, 0, 0, 0.1);
+						"
 					/>
 					<div class="text-center">
-						<p class="font-semibold text-gray-900 text-sm">João Silva</p>
-						<p class="text-xs text-gray-500 mt-1">Enterprise</p>
+						<p class="font-semibold text-white">João Silva</p>
+						<p class="text-xs text-white/50 mt-1">Enterprise</p>
 					</div>
 				</div>
 			</div>
@@ -35,8 +41,8 @@
 						<li>
 							<!-- Category Header -->
 							<div class="flex items-center gap-3 px-4 py-2 mb-1">
-								<i [class]="item.icon + ' text-primary-600'"></i>
-								<span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">{{
+								<i [class]="item.icon + ' text-white/60'"></i>
+								<span class="text-xs font-semibold text-white uppercase tracking-wide">{{
 									item.label
 								}}</span>
 							</div>
@@ -48,11 +54,11 @@
 										<li>
 											<a
 												[routerLink]="child.route || '#'"
-												routerLinkActive="bg-primary-50 text-primary-600"
+												routerLinkActive="bg-surface-700 text-white"
 												[routerLinkActiveOptions]="{ exact: false }"
-												class="flex items-center gap-3 pl-10 pr-4 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+												class="flex items-center gap-3 pl-10 pr-4 py-2.5 rounded-lg text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors"
 											>
-												<i [class]="child.icon"></i>
+												<i [class]="child.icon + ' text-white/60'"></i>
 												<span>{{ child.label }}</span>
 											</a>
 										</li>
@@ -69,19 +75,19 @@
 
 <!-- Sidebar Mobile -->
 <aside
-	class="lg:hidden fixed left-0 top-0 h-full w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out"
+	class="lg:hidden fixed left-0 top-0 h-full w-64 bg-sidebar-surface-900 shadow-xl z-50 transform transition-transform duration-300 ease-in-out"
 	[style.transform]="sidebarVisible() ? 'translateX(0)' : 'translateX(-100%)'"
 >
 	<div class="flex flex-col h-full">
 		<!-- User Section -->
-		<div class="p-4 border-b border-gray-200">
+		<div class="p-4 border-b border-white/10">
 			<div class="flex items-center justify-between mb-3">
-				<h2 class="text-lg font-semibold text-gray-900">Menu</h2>
+				<h2 class="text-lg font-semibold text-white">Menu</h2>
 				<button
 					pButton
 					type="button"
 					icon="pi pi-times"
-					class="p-button-text p-button-rounded"
+					class="p-button-text p-button-rounded close-menu-button"
 					(click)="toggleSidebar.emit()"
 					aria-label="Fechar menu"
 				></button>
@@ -90,11 +96,17 @@
 				<img
 					src="https://i.pravatar.cc/150?img=12"
 					alt="Foto do usuário"
-					class="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
+					class="w-16 h-16 rounded-full object-cover user-avatar"
+					style="
+						border: 4px solid white;
+						box-shadow:
+							0 4px 6px -1px rgba(0, 0, 0, 0.1),
+							0 2px 4px -2px rgba(0, 0, 0, 0.1);
+					"
 				/>
 				<div class="text-center">
-					<p class="font-semibold text-gray-900 text-sm">João Silva</p>
-					<p class="text-xs text-gray-500 mt-1">Enterprise</p>
+					<p class="font-semibold text-white text-sm">João Silva</p>
+					<p class="text-xs text-white/50 mt-1">Enterprise</p>
 				</div>
 			</div>
 		</div>
@@ -106,8 +118,8 @@
 					<li>
 						<!-- Category Header -->
 						<div class="flex items-center gap-3 px-4 py-2 mb-1">
-							<i [class]="item.icon + ' text-primary-600'"></i>
-							<span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">{{
+							<i [class]="item.icon + ' text-primary-400'"></i>
+							<span class="text-xs font-semibold text-white/60 uppercase tracking-wide">{{
 								item.label
 							}}</span>
 						</div>
@@ -119,12 +131,12 @@
 									<li>
 										<a
 											[routerLink]="child.route || '#'"
-											routerLinkActive="bg-primary-50 text-primary-600"
+											routerLinkActive="bg-blue-500 text-white"
 											[routerLinkActiveOptions]="{ exact: false }"
-											class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+											class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors"
 											(click)="toggleSidebar.emit()"
 										>
-											<i [class]="child.icon"></i>
+											<i [class]="child.icon + ' text-white/60'"></i>
 											<span>{{ child.label }}</span>
 										</a>
 									</li>
