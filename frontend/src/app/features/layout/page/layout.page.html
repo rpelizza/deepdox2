@@ -1,11 +1,11 @@
-<div class="layout-wrapper flex flex-col h-screen overflow-hidden">
-	<!-- Header -->
-	<app-header [sidebarVisible]="sidebarVisible()" (toggleSidebar)="toggleSidebar()" />
+<div class="layout-wrapper flex h-screen overflow-hidden">
+	<!-- Sidebar -->
+	<app-sidebar [sidebarVisible]="sidebarVisible()" (toggleSidebar)="toggleSidebar()" />
 
-	<!-- Main Content Area -->
-	<div class="flex flex-1 overflow-hidden">
-		<!-- Sidebar -->
-		<app-sidebar [sidebarVisible]="sidebarVisible()" (toggleSidebar)="toggleSidebar()" />
+	<!-- Content Area (Header + Main + Footer) -->
+	<div class="flex flex-col flex-1 overflow-hidden min-w-0">
+		<!-- Header -->
+		<app-header [sidebarVisible]="sidebarVisible()" (toggleSidebar)="toggleSidebar()" />
 
 		<!-- Main Content -->
 		<main class="flex-1 overflow-y-auto">
@@ -13,8 +13,8 @@
 				<router-outlet />
 			</div>
 		</main>
-	</div>
 
-	<!-- Footer -->
-	<app-footer />
+		<!-- Footer -->
+		<app-footer />
+	</div>
 </div>
