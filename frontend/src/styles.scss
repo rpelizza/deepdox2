@@ -57,3 +57,26 @@ a.router-link-active.bg-blue-500 i {
 .close-menu-button i {
 	color: #ffffff !important;
 }
+
+/* Sidebar scrollbar styling */
+.sidebar-nav {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+	width: 6px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 3px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
