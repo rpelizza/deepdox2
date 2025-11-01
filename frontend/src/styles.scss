@@ -69,3 +69,13 @@ a.active-route i {
 .sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #64748b;
 }
+
+/* Cards do PrimeNG com cores slate */
+p-card.bg-slate-50 .p-card {
+	background-color: #f8fafc !important;
+	border-color: #cbd5e1 !important;
+}
+
+p-card.border-slate-300 .p-card {
+	border-color: #cbd5e1 !important;
+}
