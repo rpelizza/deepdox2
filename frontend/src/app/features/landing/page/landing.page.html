@@ -1,1 +1,575 @@
-<h1 class="text-3xl">Deepdox landing</h1>
+<app-landing-header></app-landing-header>
+
+<!-- Hero Section -->
+<section class="relative pt-40 pb-32 bg-slate-50 overflow-hidden">
+	<div class="absolute inset-0 bg-gradient-to-br from-slate-100/50 to-slate-200/30"></div>
+	<div class="container mx-auto px-6 lg:px-8 relative z-10">
+		<div class="max-w-4xl mx-auto text-center">
+			<h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
+				Inteligência Empresarial
+				<span class="text-slate-600">com IA</span>
+			</h1>
+			<p class="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+				Transforme dados brutos em decisões estratégicas. Dossiês completos em minutos com inteligência
+				artificial.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+				<button
+					pButton
+					type="button"
+					label="Começar agora"
+					class="px-8 py-3.5 text-base font-medium bg-slate-900 hover:bg-slate-800"
+					icon="pi pi-arrow-right"
+					iconPos="right"
+				></button>
+				<button
+					pButton
+					type="button"
+					label="Saiba mais"
+					class="px-8 py-3.5 text-base font-medium p-button-outlined"
+					icon="pi pi-info-circle"
+					(click)="scrollToSection('funcionalidades')"
+				></button>
+			</div>
+			<div class="flex flex-wrap justify-center gap-6 text-sm text-slate-600">
+				<div class="flex items-center gap-2">
+					<i class="pi pi-check-circle text-slate-900"></i>
+					<span class="font-medium">26 dimensões de análise</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<i class="pi pi-check-circle text-slate-900"></i>
+					<span class="font-medium">Qualificação de leads</span>
+				</div>
+				<div class="flex items-center gap-2">
+					<i class="pi pi-check-circle text-slate-900"></i>
+					<span class="font-medium">100% seguro e privado</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Funcionalidades -->
+<section id="funcionalidades" class="py-24 bg-white">
+	<div class="container mx-auto px-6 lg:px-8">
+		<div class="text-center mb-20">
+			<span class="inline-block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3"
+				>Funcionalidades</span
+			>
+			<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-5 tracking-tight">
+				Tudo que você precisa para inteligência empresarial
+			</h2>
+			<p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+				Do dossiê 360° aos podcasts persuasivos, o DeepDox oferece tudo que você precisa para qualificar leads,
+				analisar mercado e fechar negócios com inteligência artificial.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+			<p-card class="bg-slate-50 border-0 shadow-none hover:shadow-md transition-all duration-300">
+				<div class="flex flex-col gap-5">
+					<div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
+						<i class="pi pi-file text-slate-900 text-2xl"></i>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold text-slate-900 mb-2">Dossiês 360° com IA</h3>
+						<p class="text-slate-600 leading-relaxed">
+							26 dimensões de análise empresarial: história, produtos, clientes, concorrentes, saúde
+							financeira, ESG, propriedade intelectual, processos judiciais e muito mais.
+						</p>
+					</div>
+				</div>
+			</p-card>
+
+			<p-card class="bg-slate-50 border-0 shadow-none hover:shadow-md transition-all duration-300">
+				<div class="flex flex-col gap-5">
+					<div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
+						<i class="pi pi-volume-up text-slate-900 text-2xl"></i>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold text-slate-900 mb-2">Podcasts Automatizados</h3>
+						<p class="text-slate-600 leading-relaxed">
+							Transforme insights em áudio persuasivo com TTS de última geração. Perfeito para
+							apresentações e compartilhamento com clientes.
+						</p>
+					</div>
+				</div>
+			</p-card>
+
+			<p-card class="bg-slate-50 border-0 shadow-none hover:shadow-md transition-all duration-300">
+				<div class="flex flex-col gap-5">
+					<div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
+						<i class="pi pi-chart-line text-slate-900 text-2xl"></i>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold text-slate-900 mb-2">Market Analysis ML</h3>
+						<p class="text-slate-600 leading-relaxed">
+							Machine Learning aplicado à análise de mercado, tendências, performance e enriquecimento de
+							dados de concorrentes.
+						</p>
+					</div>
+				</div>
+			</p-card>
+
+			<p-card class="bg-slate-50 border-0 shadow-none hover:shadow-md transition-all duration-300">
+				<div class="flex flex-col gap-5">
+					<div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
+						<i class="pi pi-file-pdf text-slate-900 text-2xl"></i>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold text-slate-900 mb-2">Relatórios Personalizados</h3>
+						<p class="text-slate-600 leading-relaxed">
+							Exporte dossiês completos em PDF ou Excel com design profissional e dados estruturados
+							prontos para apresentação.
+						</p>
+					</div>
+				</div>
+			</p-card>
+
+			<p-card class="bg-slate-50 border-0 shadow-none hover:shadow-md transition-all duration-300">
+				<div class="flex flex-col gap-5">
+					<div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
+						<i class="pi pi-users text-slate-900 text-2xl"></i>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold text-slate-900 mb-2">Sales Coach IA</h3>
+						<p class="text-slate-600 leading-relaxed">
+							Assistente de vendas inteligente que sugere estratégias, abordagens e insights para
+							qualificar leads e fechar negócios.
+						</p>
+					</div>
+				</div>
+			</p-card>
+
+			<p-card class="bg-slate-50 border-0 shadow-none hover:shadow-md transition-all duration-300">
+				<div class="flex flex-col gap-5">
+					<div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm">
+						<i class="pi pi-lightbulb text-slate-900 text-2xl"></i>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold text-slate-900 mb-2">Insights Estratégicos</h3>
+						<p class="text-slate-600 leading-relaxed">
+							IA analisa padrões, identifica oportunidades e gera recomendações acionáveis para decisões
+							de negócio.
+						</p>
+					</div>
+				</div>
+			</p-card>
+		</div>
+	</div>
+</section>
+
+<!-- Benefícios -->
+<section id="beneficios" class="py-24 bg-slate-50">
+	<div class="container mx-auto px-6 lg:px-8">
+		<div class="text-center mb-20">
+			<span class="inline-block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3"
+				>Benefícios</span
+			>
+			<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-5 tracking-tight">
+				Por que escolher o DeepDox?
+			</h2>
+			<p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+				Transforme sua estratégia de vendas e análise de mercado com a plataforma de inteligência empresarial
+				mais completa do Brasil.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-16">
+			<div class="text-center">
+				<div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
+					<i class="pi pi-clock text-slate-900 text-3xl"></i>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2">Economia de Tempo</h3>
+				<p class="text-sm font-semibold text-slate-700 mb-3">De horas para minutos</p>
+				<p class="text-slate-600 text-sm leading-relaxed">
+					O que levaria dias de pesquisa manual, o DeepDox entrega em minutos com precisão de IA.
+				</p>
+			</div>
+
+			<div class="text-center">
+				<div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
+					<i class="pi pi-chart-bar text-slate-900 text-3xl"></i>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2">ROI Comprovado</h3>
+				<p class="text-sm font-semibold text-slate-700 mb-3">Até 120% de aumento em vendas</p>
+				<p class="text-slate-600 text-sm leading-relaxed">
+					Clientes reportam aumento significativo em conversão e qualificação de leads.
+				</p>
+			</div>
+
+			<div class="text-center">
+				<div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
+					<i class="pi pi-map-marker text-slate-900 text-3xl"></i>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2">Dados Brasileiros</h3>
+				<p class="text-sm font-semibold text-slate-700 mb-3">100% focado no mercado BR</p>
+				<p class="text-slate-600 text-sm leading-relaxed">
+					Fontes locais, validação de CNPJ, processos judiciais e propriedade intelectual nacional.
+				</p>
+			</div>
+
+			<div class="text-center">
+				<div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
+					<i class="pi pi-cog text-slate-900 text-3xl"></i>
+				</div>
+				<h3 class="text-xl font-bold text-slate-900 mb-2">Precisão de IA</h3>
+				<p class="text-sm font-semibold text-slate-700 mb-3">26 dimensões de análise</p>
+				<p class="text-slate-600 text-sm leading-relaxed">
+					Machine Learning e GPT-4 para insights profundos e recomendações estratégicas.
+				</p>
+			</div>
+		</div>
+
+		<div class="text-center">
+			<p class="text-slate-700 mb-8 text-lg">
+				Junte-se a centenas de profissionais que já transformaram suas vendas com o DeepDox
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<button
+					pButton
+					type="button"
+					label="Começar agora"
+					class="px-8 py-3.5 text-base font-medium bg-slate-900 hover:bg-slate-800"
+					icon="pi pi-arrow-right"
+					iconPos="right"
+				></button>
+				<button
+					pButton
+					type="button"
+					label="Ver FAQ"
+					class="px-8 py-3.5 text-base font-medium p-button-outlined"
+					icon="pi pi-question-circle"
+					(click)="scrollToSection('faq')"
+				></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Como Funciona -->
+<section id="como-funciona" class="py-24 bg-white">
+	<div class="container mx-auto px-6 lg:px-8">
+		<div class="text-center mb-20">
+			<span class="inline-block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3"
+				>Como Funciona</span
+			>
+			<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-5 tracking-tight">3 Passos Simples</h2>
+			<p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+				De zero a dossiê completo em minutos. Veja como é simples transformar dados brutos em decisões
+				estratégicas.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto mb-12">
+			<div class="flex flex-col items-center text-center">
+				<div
+					class="w-24 h-24 bg-slate-900 rounded-2xl flex items-center justify-center mb-8 text-white font-bold text-3xl shadow-lg"
+				>
+					01
+				</div>
+				<h3 class="text-2xl font-bold text-slate-900 mb-4">Insira o nome da empresa</h3>
+				<p class="text-slate-600 leading-relaxed max-w-xs">
+					Digite o nome ou CNPJ da empresa que você quer investigar. Nosso sistema valida e identifica
+					automaticamente.
+				</p>
+			</div>
+
+			<div class="flex flex-col items-center text-center">
+				<div
+					class="w-24 h-24 bg-slate-900 rounded-2xl flex items-center justify-center mb-8 text-white font-bold text-3xl shadow-lg"
+				>
+					02
+				</div>
+				<h3 class="text-2xl font-bold text-slate-900 mb-4">IA investiga 26 dimensões</h3>
+				<p class="text-slate-600 leading-relaxed max-w-xs">
+					Nossa inteligência artificial vasculha a web, cruza dados de múltiplas fontes e analisa 26 dimensões
+					empresariais em paralelo.
+				</p>
+			</div>
+
+			<div class="flex flex-col items-center text-center">
+				<div
+					class="w-24 h-24 bg-slate-900 rounded-2xl flex items-center justify-center mb-8 text-white font-bold text-3xl shadow-lg"
+				>
+					03
+				</div>
+				<h3 class="text-2xl font-bold text-slate-900 mb-4">Receba dossiê completo</h3>
+				<p class="text-slate-600 leading-relaxed max-w-xs">
+					Em minutos, você tem acesso ao dossiê 360°, insights estratégicos, podcasts, relatórios e
+					recomendações de vendas.
+				</p>
+			</div>
+		</div>
+
+		<div class="text-center">
+			<p class="text-slate-700 mb-8 text-lg">Pronto para experimentar? Comece agora mesmo, sem compromisso.</p>
+			<button
+				pButton
+				type="button"
+				label="Ver planos"
+				class="px-8 py-3.5 text-base font-medium bg-slate-900 hover:bg-slate-800"
+				icon="pi pi-arrow-right"
+				iconPos="right"
+				(click)="scrollToSection('planos')"
+			></button>
+		</div>
+	</div>
+</section>
+
+<!-- Planos -->
+<section id="planos" class="py-24 bg-slate-50">
+	<div class="container mx-auto px-6 lg:px-8">
+		<div class="text-center mb-20">
+			<span class="inline-block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">Planos</span>
+			<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-5 tracking-tight">Escolha o plano ideal</h2>
+			<p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+				Planos flexíveis para profissionais e empresas de todos os tamanhos
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+			<!-- Starter -->
+			<p-card class="bg-white border-0 shadow-md hover:shadow-xl transition-all duration-300">
+				<div class="flex flex-col h-full">
+					<div class="mb-6">
+						<h3 class="text-2xl font-bold text-slate-900 mb-2">Starter</h3>
+						<p class="text-slate-600 text-sm leading-relaxed">
+							Ideal para profissionais autônomos e freelancers que desejam iniciar com inteligência de
+							vendas e otimizar suas prospecções.
+						</p>
+					</div>
+					<div class="mb-8">
+						<span class="text-5xl font-bold text-slate-900">R$149</span>
+						<span class="text-slate-600 text-lg">/mês</span>
+					</div>
+					<ul class="space-y-4 mb-8 flex-grow">
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">3 dossiês por mês (básicos)</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">1 usuário</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">2 podcasts por mês (conversacionais)</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">1GB de armazenamento</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">Suporte por e-mail</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">Sales Coach (básicos)</span>
+						</li>
+					</ul>
+					<div class="flex flex-col gap-3">
+						<button
+							pButton
+							type="button"
+							label="Contratar"
+							class="w-full p-button-outlined"
+							icon="pi pi-shopping-cart"
+						></button>
+					</div>
+				</div>
+			</p-card>
+
+			<!-- Professional -->
+			<p-card class="bg-slate-900 text-white border-0 shadow-xl relative">
+				<div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+					<span
+						class="bg-white text-slate-900 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide"
+						>Mais Popular</span
+					>
+				</div>
+				<div class="flex flex-col h-full">
+					<div class="mb-6">
+						<h3 class="text-2xl font-bold mb-2">Professional</h3>
+						<p class="text-slate-300 text-sm leading-relaxed">
+							Perfeito para vendedores experientes e consultores que precisam de mais volume, análises
+							profundas e ferramentas avançadas para escalar resultados
+						</p>
+					</div>
+					<div class="mb-8">
+						<span class="text-5xl font-bold">R$449</span>
+						<span class="text-slate-300 text-lg">/mês</span>
+					</div>
+					<ul class="space-y-4 mb-8 flex-grow">
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-white mt-1 text-lg"></i>
+							<span class="text-slate-200">10 dossiês por mês (empresariais)</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-white mt-1 text-lg"></i>
+							<span class="text-slate-200">1 usuário</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-white mt-1 text-lg"></i>
+							<span class="text-slate-200">6 podcasts por mês (conversacionais e persuasivos)</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-white mt-1 text-lg"></i>
+							<span class="text-slate-200">5GB de armazenamento</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-white mt-1 text-lg"></i>
+							<span class="text-slate-200">Suporte por e-mail e chat</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-white mt-1 text-lg"></i>
+							<span class="text-slate-200">Sales Coach (intermediário)</span>
+						</li>
+					</ul>
+					<div class="flex flex-col gap-3">
+						<button
+							pButton
+							type="button"
+							label="Contratar"
+							class="w-full bg-white text-slate-900 hover:bg-slate-100"
+							icon="pi pi-shopping-cart"
+						></button>
+					</div>
+				</div>
+			</p-card>
+
+			<!-- Enterprise -->
+			<p-card class="bg-white border-0 shadow-md hover:shadow-xl transition-all duration-300">
+				<div class="flex flex-col h-full">
+					<div class="mb-6">
+						<h3 class="text-2xl font-bold text-slate-900 mb-2">Enterprise</h3>
+						<p class="text-slate-600 text-sm leading-relaxed">
+							A solução completa para equipes e empresas que buscam uma plataforma centralizada, com
+							multi-tenancy, segurança avançada e IA personalizada para dominar o mercado.
+						</p>
+					</div>
+					<div class="mb-8">
+						<span class="text-5xl font-bold text-slate-900">R$1,099</span>
+						<span class="text-slate-600 text-lg">/mês</span>
+					</div>
+					<ul class="space-y-4 mb-8 flex-grow">
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">20 dossiês por mês (personalizados)</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">1 usuário</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">15 podcasts por mês (personalizados)</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">10GB de armazenamento</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">Suporte por e-mail, chat, whatsapp e prioritário</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<i class="pi pi-check text-slate-900 mt-1 text-lg"></i>
+							<span class="text-slate-600">Sales Coach (Base de conhecimento avançada)</span>
+						</li>
+					</ul>
+					<div class="flex flex-col gap-3">
+						<button
+							pButton
+							type="button"
+							label="Contratar"
+							class="w-full p-button-outlined"
+							icon="pi pi-shopping-cart"
+						></button>
+					</div>
+				</div>
+			</p-card>
+		</div>
+	</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24 bg-white">
+	<div class="container mx-auto px-6 lg:px-8">
+		<div class="text-center mb-20">
+			<span class="inline-block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">FAQ</span>
+			<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-5 tracking-tight">Perguntas Frequentes</h2>
+			<p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+				Tire suas dúvidas sobre o DeepDox e descubra como nossa plataforma pode transformar sua estratégia de
+				vendas e análise de mercado.
+			</p>
+		</div>
+
+		<div class="max-w-4xl mx-auto space-y-4">
+			@for (faq of faqs; track faq.id) {
+			<p-card class="bg-slate-50 border-0 shadow-none hover:shadow-sm transition-shadow">
+				<div>
+					<button
+						type="button"
+						class="w-full flex items-center justify-between text-left group"
+						(click)="toggleFaq(faq.id)"
+					>
+						<h3
+							class="text-lg font-semibold text-slate-900 pr-4 group-hover:text-slate-700 transition-colors"
+						>
+							{{ faq.question }}
+						</h3>
+						<i
+							[class]="
+								faq.open()
+									? 'pi pi-chevron-up text-slate-600 flex-shrink-0 transition-transform'
+									: 'pi pi-chevron-down text-slate-600 flex-shrink-0 transition-transform'
+							"
+						></i>
+					</button>
+					@if (faq.open()) {
+					<div class="mt-5 pt-5 border-t border-slate-200">
+						<p class="text-slate-600 leading-relaxed">{{ faq.answer }}</p>
+					</div>
+					}
+				</div>
+			</p-card>
+			}
+		</div>
+	</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-white py-16">
+	<div class="container mx-auto px-6 lg:px-8">
+		<div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+			<div class="flex items-center">
+				<img src="/images/logo_deep.png" alt="DeepDox Logo" class="h-10 w-auto" />
+			</div>
+			<div class="flex items-center gap-6">
+				<a
+					href="https://www.instagram.com/deepdox_"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors"
+					aria-label="Instagram"
+				>
+					<i class="pi pi-instagram"></i>
+				</a>
+				<a
+					href="https://www.linkedin.com/company/deepdox"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors"
+					aria-label="LinkedIn"
+				>
+					<i class="pi pi-linkedin"></i>
+				</a>
+			</div>
+		</div>
+		<div class="pt-8 border-t border-slate-800 text-center">
+			<p class="text-slate-400 text-sm">© 2025 DeepDox. Todos os direitos reservados.</p>
+		</div>
+	</div>
+</footer>
