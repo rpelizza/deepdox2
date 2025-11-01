@@ -22,3 +22,60 @@ body {
 	min-width: 100%;
 	background: linear-gradient(180deg, #e0e7f5 0%, rgba(170, 194, 239, 0.06) 111.26%);
 }
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Estilos globais mínimos - Tailwind CSS é usado diretamente nos componentes */
+
+/* Link ativo na sidebar */
+a.active-route {
+	background: linear-gradient(135deg, #64748b, #475569) !important;
+	color: #fff !important;
+	box-shadow: 0 2px 4px rgba(100, 116, 139, 0.3) !important;
+}
+
+a.active-route i {
+	color: #fff !important;
+}
+
+/* Scrollbar customizada para sidebar */
+.sidebar-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #94a3b8 #e2e8f0;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar {
+	width: 8px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-track {
+	background: #e2e8f0;
+	border-radius: 4px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+	background: #94a3b8;
+	border-radius: 4px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #64748b;
+}
+
+/* Cards do PrimeNG com cores slate */
+p-card.bg-slate-50 .p-card {
+	background-color: #f8fafc !important;
+	border-color: #cbd5e1 !important;
+}
+
+p-card.border-slate-300 .p-card {
+	border-color: #cbd5e1 !important;
+}
