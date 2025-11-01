@@ -13,4 +13,5 @@ import { ToolbarModule } from 'primeng/toolbar';
 export class HeaderComponent {
 	sidebarVisible = input.required<boolean>();
 	toggleSidebar = output<void>();
+	logout = output<void>();
 }

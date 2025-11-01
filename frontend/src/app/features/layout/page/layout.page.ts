@@ -31,4 +31,10 @@ export class LayoutPage {
 	toggleSidebar(): void {
 		this.sidebarVisible.update(visible => !visible);
 	}
+
+	handleLogout(): void {
+		// TODO: Implementar lógica de logout
+		// Exemplo: limpar tokens, redirecionar para login, etc.
+		console.log('Logout solicitado');
+	}
 }
