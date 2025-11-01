@@ -33,57 +33,39 @@ ul {
 	margin: 0;
 }
 
-/* Sidebar background color */
-.bg-sidebar-surface-900 {
-	background-color: var(--p-surface-900, #0f172a);
+/* Estilos globais mínimos - Tailwind CSS é usado diretamente nos componentes */
+
+/* Link ativo na sidebar */
+a.active-route {
+	background: linear-gradient(135deg, #64748b, #475569) !important;
+	color: #fff !important;
+	box-shadow: 0 2px 4px rgba(100, 116, 139, 0.3) !important;
 }
 
-/* User avatar border */
-.user-avatar {
-	border: 4px solid #ffffff !important;
-	box-shadow:
-		0 4px 6px -1px rgba(0, 0, 0, 0.1),
-		0 2px 4px -2px rgba(0, 0, 0, 0.1) !important;
+a.active-route i {
+	color: #fff !important;
 }
 
-/* Sidebar menu active link icon color */
-a.bg-blue-500 i,
-a.router-link-active.bg-blue-500 i {
-	color: #ffffff !important;
-}
-
-/* Sidebar close menu button icon color */
-.close-menu-button .p-button-icon,
-.close-menu-button i {
-	color: #ffffff !important;
-}
-
-/* Sidebar scrollbar styling */
-.sidebar-nav {
+/* Scrollbar customizada para sidebar */
+.sidebar-scrollbar {
 	scrollbar-width: thin;
-	scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+	scrollbar-color: #94a3b8 #e2e8f0;
 }
 
-.sidebar-nav::-webkit-scrollbar {
-	width: 6px;
+.sidebar-scrollbar::-webkit-scrollbar {
+	width: 8px;
 }
 
-.sidebar-nav::-webkit-scrollbar-track {
-	background: transparent;
+.sidebar-scrollbar::-webkit-scrollbar-track {
+	background: #e2e8f0;
+	border-radius: 4px;
 }
 
-.sidebar-nav::-webkit-scrollbar-thumb {
-	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 3px;
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+	background: #94a3b8;
+	border-radius: 4px;
 }
 
-.sidebar-nav::-webkit-scrollbar-thumb:hover {
-	background-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Footer border and shadow */
-.footer {
-	box-shadow:
-		0 -4px 6px -1px rgba(0, 0, 0, 0.1),
-		0 -2px 4px -2px rgba(0, 0, 0, 0.1) !important;
+.sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #64748b;
 }
